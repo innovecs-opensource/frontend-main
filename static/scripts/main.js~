@@ -21,7 +21,7 @@ $.each(services, function(index, service){
 	      service_elem = $('<div>', {id: service.name}).appendTo('body')
 	  }
 
-    json = $.getJSON(domain + service.url, function(json){
+    json = $.getJSON(domain + service.url), function(json){
         service_elem.html(json.data);
-    })
+    }
 });
