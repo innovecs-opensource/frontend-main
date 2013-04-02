@@ -9,7 +9,7 @@ services.push(hello_world);
 
 var json;
 $.each(services, function(index, service_id){
-    json = $.getJSON(domain + service_id.url), function(json){
+    json = $.getJSON(domain + service_id.url, function(json){
         $('#first_service').html(json.data);
-    }
+    });
 });
